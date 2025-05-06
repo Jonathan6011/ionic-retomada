@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,15 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class HomePage {
+  nome='';
+  telefone='';
+  email='';
 
-  constructor() {}
+  constructor(public router: Router) {}
 
+  abrirTela(){
+    this.router.navigateByUrl
+    (`/tela-confirmar/${this.nome}/${this.email}/${this.telefone}`);
+  }
 }
+
