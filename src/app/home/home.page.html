@@ -9,13 +9,13 @@
 <ion-content [fullscreen]="true">
   <ion-item>
     <ion-input label="diária" labelPlacement="floating"
-    placeholder="digite o valor da diária" [(ngModel)]="nome"></ion-input>
+    placeholder="digite o valor da diária" [(ngModel)]="diaria"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input label="email" labelPlacement="floating"
-    placeholder="digite seu email" [(ngModel)]="email"></ion-input>
+   <ion-range min="0"  max="30" [(ngModel)] = "dia"></ion-range>
+   <ion-label>{{dia}}</ion-label>
   </ion-item>
 
-  <ion-button expand="block" (click)="abrirTela()">Cadastrar</ion-button>
+  <ion-button expand="block" (click)="abrirTela()">previa</ion-button>
 </ion-content>

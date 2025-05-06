@@ -12,8 +12,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'tela-confirmar/:nome/:email/:telefone',
+    path: 'tela-confirmar/:diaria/:dia',
     loadChildren: () => import('./tela-confirmar/tela-confirmar.module').then( m => m.TelaConfirmarPageModule)
+  },
+  {
+    path: 'tela-final/:res',
+    loadChildren: () => import('./tela-final/tela-final.module').then( m => m.TelaFinalPageModule)
   },
 ];
 
