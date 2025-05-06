@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,15 +9,19 @@ import { Router } from '@angular/router';
   standalone: false,
 })
 export class HomePage {
-  nome='';
-  telefone='';
-  email='';
+  diaria='';
+  dia='';
+  res = 0
 
-  constructor(public router: Router) {}
+  constructor(public router: Router) {
+
+  }
 
   abrirTela(){
     this.router.navigateByUrl
-    (`/tela-confirmar/${this.nome}/${this.email}/${this.telefone}`);
+    (`/tela-confirmar/${this.diaria}/${this.dia}`);
   }
+
+
 }
 
